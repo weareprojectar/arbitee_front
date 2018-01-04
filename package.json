@@ -45,5 +45,5 @@
     "postcss-loader": "^2.0.9",
     "promise-polyfill": "^6.0.2",
     "radium": "^0.19.6"
-  },
+  }
 }
