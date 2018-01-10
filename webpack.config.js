@@ -38,12 +38,12 @@ module.exports = {
     ]
   },
 
-  plugins: {debug ? [] : [
+  plugins: debug ? [] : [
     new webpack.optimize.OccurrenceOrderPlugin()
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true }),
     ]
-  },
+  
 
   // resolve: {
   //   modules: [node_modules],

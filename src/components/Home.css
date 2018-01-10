@@ -4,7 +4,7 @@
     display:flex;
     flex: 1;
     flex-direction: column;
-    width:100%; 
+    width:100%;
     margin:0 auto;
 }
 
@@ -70,5 +70,3 @@
     flex: 1;
     background:#474747;
 }
-
-

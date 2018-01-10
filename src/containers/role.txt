@@ -1,0 +1,3 @@
+this directory will contain web-page!
+
+각 페이지를 여기다가 생성하시면 됩니다 ㅎ 
