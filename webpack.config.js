@@ -1,8 +1,10 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
+var path = require('path');
+
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['./src/index.js', './src/style.css'],
 
   // devtool: "#eval-source-map",
 
@@ -36,17 +38,16 @@ module.exports = {
     ]
   },
 
-  plugins: [],
-
-  plugins: debug ? [] : [
+  plugins: {debug ? [] : [
     new webpack.optimize.OccurrenceOrderPlugin()
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true }),
-  ]
+    ]
+  },
 
   // resolve: {
   //   modules: [node_modules],
   //   extensions: ['.js', '.json', '.jsx', '.css']
-  // },
+  // }
 
 };
