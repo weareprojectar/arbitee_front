@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import './Home.css';
 
 class Home extends Component {
@@ -10,7 +11,7 @@ class Home extends Component {
                     <nav>AR</nav>
                 </header>
                 <section class="slider_section">
-                    <button class="btn1">시작하기</button>
+                    <Link to={'/account'} class="btn1"><button>시작하기</button></Link>
                     <button class="btn2">로그인</button>
                     <button class="btn3">회원가입</button>
                 </section>
