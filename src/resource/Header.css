@@ -1,0 +1,46 @@
+body {
+  background-color: #0C283A;
+  color: white;
+}
+
+.logo {
+    display: inline;
+    margin-right: 10rem;
+    height: 3.5rem;
+    width: 100vw;
+    line-height: 3.5rem;
+    color: pink;
+    font-size: 2rem;
+}
+
+.menu {
+    display: inline;
+    vertical-align: middle;
+    font-size: 1rem;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.menu-item {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 4rem;
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: orange;
+}
+
+.menu-item:active, .menu-item.active {
+    color: red;
+}
+
+.button {
+  color: black;
+}

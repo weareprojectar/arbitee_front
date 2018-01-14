@@ -1,0 +1,39 @@
+body {
+  background-color: #0C283A;
+  color: white;
+}
+
+.menu {
+    display: inline;
+    background-color: #0C283A;
+    vertical-align: middle;
+    height:4rem;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.menu-item {
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    line-height: 4rem;
+    overflow: hidden;
+    height: auto;
+    width: 33.3333%;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: orange;
+}
+
+.menu-item:active, .menu-item.active {
+    color: red;
+}
+
+.button {
+  color: black;
+}

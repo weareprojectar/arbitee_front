@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import Home from '../components/home/Home';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-class PageHome extends Component {
+import HomeMenu from '../components/home/HomeMenu';
+
+class Home extends Component {
   render() {
     return (
-      <Home />
-    )
+      <div>
+        <HomeMenu/>
+      </div>
+    );
   }
 }
 
-export default PageHome;
+export default Home;

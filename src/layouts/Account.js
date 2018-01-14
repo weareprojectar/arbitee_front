@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-
-import Header from '../components/Header';
-import Menu from '../components/account/Menu';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 
+import AccountMenu from '../components/account/AccountMenu';
+
+import AccountGuide from './AccountGuide';
+import AccountCreate from './AccountCreate';
+import AccountDeposit from './AccountDeposit';
 
 
 class Account extends Component {
@@ -11,12 +14,11 @@ class Account extends Component {
     return (
         <div>
           <div>
-            <Header/>
+            <AccountMenu/>
           </div>
-          <div>
-            <Menu/>
-          </div>
-          {this.props.children}
+          <Route path="/account/guide" component={AccountGuide}/>
+          <Route path="/account/accountCreate" component={AccountCreate}/>
+          <Route path="/account/deposit" component={AccountDeposit}/>
         </div>
     );
   }

@@ -1,6 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
-import '../style.css';
+import { Link } from 'react-router-dom';
+import '../resource/Header.css';
+
+import InfoPage from '../layouts/InfoPage';
+
+
 
 const MenuItem = ({active, children, to}) => (
   <Link to={to} className="menu-item">
@@ -11,10 +15,10 @@ const MenuItem = ({active, children, to}) => (
 const Header = () => {
   return (
     <div>
-      <div className="logo">AR</div>
+      <Link to={'/'}><div className="logo">AR</div></Link>
       <div className="menu">
-        <MenuItem to={'/home'}>LOGOUT</MenuItem>
-        <MenuItem>MYPAGE</MenuItem>
+        <MenuItem to={'/'}>LOGOUT</MenuItem>
+        <MenuItem to={'/infopage'}>MYPAGE</MenuItem>
       </div>
     </div>
   )

@@ -1,0 +1,33 @@
+.Portfolio {
+  background-color: #0C283A;
+  height: 870px;
+  color: white;
+}
+
+.Portfolio-intro {
+  font-size: large;
+  text-align: center;
+}
+
+.Investment {
+  text-align: right;
+  color: red;
+}
+
+.Portfolioc {
+  padding: 10px;
+  font-size: large;
+  text-align: left;
+}
+
+.Portfolios {
+  padding: 10px;
+  font-size: large;
+  text-align: center;
+}
+
+.Portfoliop {
+  padding: 10px;
+  font-size: large;
+  text-align: right;
+}
