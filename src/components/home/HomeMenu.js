@@ -12,9 +12,9 @@ class HomeMenu extends Component {
                     <nav>AR</nav>
                 </header>
                 <section class="slider_section">
-                    <Link to={'/accountindex'} class="btn1"><button>시작하기</button></Link>
-                    <Link to={'/signin'} class="btn2"><button>로그인</button></Link>
-                    <Link to={'/signup'} class="btn3"><button>회원가입</button></Link>
+                    <Link to={'/accountindex'} className="btn1"><button type="button">시작하기</button></Link>
+                    <Link to={'/signin'} className="btn2"><button>로그인</button></Link>
+                    <Link to={'/signup'} className="btn3"><button>회원가입</button></Link>
                 </section>
                 <footer class="footer"></footer>
             </div>

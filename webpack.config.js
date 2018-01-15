@@ -4,7 +4,6 @@ var path = require('path');
 
 
 module.exports = {
-  // entry: ['./src/index.js', './src/style.css'],
   entry: ['./src/index.js', './src/style.css'],
 
   // devtool: "#eval-source-map",
@@ -42,7 +41,6 @@ module.exports = {
 
   plugins: debug ? [] : [
     new webpack.optimize.OccurrenceOrderPlugin()
-    // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true }),
     ]
 
