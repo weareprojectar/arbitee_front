@@ -18,4 +18,4 @@ class Portfoliodetail extends Component {
   }
 }
 
-export default portfoliodetail;
+export default Portfoliodetail;

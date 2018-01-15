@@ -8,6 +8,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import InfoPage from './InfoPage';
 import FundSimple from './FundSimple';
+import FundDetail from './FundDetail';
 import NotFound from './NotFound';
 
 import Header from './../components/Header';
@@ -25,7 +26,9 @@ class App extends Component {
               <Route path="/signup" component={SignUp} />
               <Route path="/account" component={Account} />
               <Route path="/infopage" component={InfoPage} />
-              <Route path="/fundsimple" component={FundSimple} />              <Route component={NotFound}/>
+              <Route path="/fundsimple" component={FundSimple} />
+              <Route path="/funddetail" component={FundDetail} />
+              <Route component={NotFound}/>
             </Switch>
         </div>
       </Router>
