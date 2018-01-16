@@ -13,9 +13,19 @@ import NotFound from './NotFound';
 
 import Header from './../components/Header';
 
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+const store = createStore(
+  (state = {}) => state,
+  applyMiddleware(thunk)
+)
+
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <Router>
         <div>
             <Route exact path="/" component={Home} />
@@ -32,6 +42,7 @@ class App extends Component {
             </Switch>
         </div>
       </Router>
+      </Provider>
     );
   }
 }

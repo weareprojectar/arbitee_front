@@ -1,15 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import SignUpForm from '../components/sign/SignUpForm';
+import { connect } from 'react-redux';
+import { userSignupRequest } from '../actions/signupActions';
 
-class SignIn extends React.Component {
+class SignUp extends React.Component {
   render () {
+    const { userSignupRequest } = this.props;
     return(
       <div>
-        회원가입할래>?
+        <SignUpForm userSignupRequest={userSignupRequest}/>
       </div>
     );
 
   }
 }
 
-export default SignIn;
+SignUpForm.propTypes = {
+  userSignupRequest: PropTypes.func.isRequired
+}
+
+export default connect(null, {userSignupRequest})(SignUp);
