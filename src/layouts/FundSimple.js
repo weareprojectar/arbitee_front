@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import SimpleChart from '../components/fund/SimpleChart';
 
 class FundSimple extends React.Component {
   render () {
@@ -10,6 +11,7 @@ class FundSimple extends React.Component {
         <div>
           여기서 포트폴리오 목록들 쫙!
           <Link to={'funddetail'}>Fund_1</Link>
+          <SimpleChart/>
         </div>
       </div>
     );
