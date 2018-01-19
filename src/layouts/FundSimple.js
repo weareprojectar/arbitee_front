@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import SimpleChart from '../components/fund/SimpleChart';
+import BTC from '../components/fund/BTC'
 
 class FundSimple extends React.Component {
   render () {
@@ -15,6 +16,7 @@ class FundSimple extends React.Component {
           여기서 포트폴리오 목록들 쫙!
           <Link to={'funddetail'}>차트차트</Link>
           <SimpleChart/>
+          <BTC/>
         </div>
       </div>
     );
