@@ -5,7 +5,6 @@ import '../resource/Header.css';
 import InfoPage from '../layouts/InfoPage';
 
 
-
 const MenuItem = ({active, children, to}) => (
   <Link to={to} className="menu-item">
     {children}

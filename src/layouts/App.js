@@ -29,18 +29,18 @@ class App extends Component {
       <Provider store={store}>
       <Router>
         <div>
+
+          <Switch>
             <Route exact path="/" component={Home} />
-            <Header/>
-            <Switch>
-              <Route path="/accountindex" component={AccountIndex}/>
-              <Route path="/signin" component={SignIn} />
-              <Route path="/signup" component={SignUp} />
-              <Route path="/account" component={Account} />
-              <Route path="/infopage" component={InfoPage} />
-              <Route path="/fundsimple" component={FundSimple} />
-              <Route path="/funddetail" component={FundDetail} />
-              <Route component={NotFound}/>
-            </Switch>
+            <Route path="/accountindex" component={AccountIndex}/>
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/account" component={Account} />
+            <Route path="/infopage" component={InfoPage} />
+            <Route path="/fundsimple" component={FundSimple} />
+            <Route path="/funddetail" component={FundDetail} />
+            <Route component={NotFound}/>
+          </Switch>
         </div>
       </Router>
       </Provider>

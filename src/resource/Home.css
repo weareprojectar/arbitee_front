@@ -31,7 +31,7 @@
     align-items: center;
     width:100%;
     height: 1000px;
-    background:#0C283A;
+    background: #0C283A;
     margin-top: 2px;
 }
 
@@ -50,6 +50,7 @@
     justify-content: center;
     font-size: 1rem;
     margin-bottom: 15px;
+
 }
 
 .btn3{
