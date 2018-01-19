@@ -1,39 +1,74 @@
 import React, { Component } from 'react';
 import ReactHighcharts from 'react-highcharts';
- 
+import Highcharts from 'highcharts';
+
 // Create the chart
 const config = {
+  
   chart: {
-    type: 'line'
+    type: 'spline',
+    animation: Highcharts.svg, // don't animate in old IE
+    marginRight: 10,
+    events: {
+        load: function () {
+
+            // set up the updating of the chart each second
+            var series = this.series[0];
+            setInterval(function () {
+
+                var x = (new Date()).getTime(), // current time
+                    y =  Math.random();
+                series.addPoint([x, y], true, true);
+            }, 1000);
+        }
+    }
 },
 title: {
-    text: 'Monthly Average Temperature'
-},
-subtitle: {
-    text: 'Source: WorldClimate.com'
+    text: 'Live random data'
 },
 xAxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    type: 'datetime',
+    tickPixelInterval: 150
 },
 yAxis: {
     title: {
-        text: 'Temperature (°C)'
+        text: 'Value'
+    },
+    plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+    }]
+},
+tooltip: {
+    formatter: function () {
+        return '<b>' + this.series.name + '</b><br/>' +
+            Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+            Highcharts.numberFormat(this.y, 2);
     }
 },
-plotOptions: {
-    line: {
-        dataLabels: {
-            enabled: true
-        },
-        enableMouseTracking: false
-    }
+legend: {
+    enabled: false
+},
+exporting: {
+    enabled: false
 },
 series: [{
-    name: 'Tokyo',
-    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-}, {
-    name: 'London',
-    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    name: 'Random data',
+    data: (function () {
+        // generate an array of random data
+        var data = [],
+            time = (new Date()).getTime(),
+            i;
+
+        for (i = -19; i <= 0; i += 1) {
+            data.push({
+                x: time + i * 2000,
+                y: Math.random()
+            });
+        }
+        return data;
+    }())
 }]
 };
  
@@ -41,7 +76,7 @@ class SimpleChart extends Component {
     render() {
         return (
             <div>
-                <ReactHighcharts config={config}></ReactHighcharts>
+                <ReactHighcharts config={config} ref="chart"></ReactHighcharts>
             </div>
         );
     }
