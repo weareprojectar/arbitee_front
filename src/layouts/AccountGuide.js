@@ -9,14 +9,12 @@ const Post = ({match}) => {
   )
 }
 
-
-
 const AccountGuide = () => {
   return (
     <div>
-      <p>블라블라</p>
-      <Link to="/account/guide/hehe">요로켕</Link>
-      <Link to="/account/guide/haha">저러켕</Link>
+      <p>Arbiter 툴과 ABT 코인 이용하기</p>
+      <Link to="/account/guide/hehe">Arbiter툴 이용을 위한 계좌 만들기</Link>
+      <Link to="/account/guide/haha">ABT 코인 입출금을 위한 계좌 만들기</Link>
       <Route
         path="/account/guide/:title"
         component={Post}

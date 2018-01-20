@@ -19,8 +19,8 @@ class QRcode extends Component {
     render() {
         return(
             <div>
-              <button type="button">QR 코드 여기다 넣공</button>
-              <p>옆에다 설명을 해쥬면 되지!</p>
+              <button type="button">QR 코드 생성하기</button>
+              <p>한 번 생성된 QR 코드는 영구적으로 사용됩니다. 해킹 및 오류 등 특수한 경우에만 재발급 신청이 가능합니다.</p>
             </div>
         );
     }
