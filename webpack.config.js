@@ -35,6 +35,11 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        exclude: /(node_modules)/,
+        loader : 'file-loader'
       }
     ]
   },
@@ -43,11 +48,5 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin()
     // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: true }),
     ]
-
-
-  // resolve: {
-  //   modules: [node_modules],
-  //   extensions: ['.js', '.json', '.jsx', '.css']
-  // }
 
 };

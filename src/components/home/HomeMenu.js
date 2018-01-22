@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../../resource/Home.css';
+import logo from "../../resource/logo.png"
 
 
 class HomeMenu extends Component {
@@ -9,7 +10,11 @@ class HomeMenu extends Component {
             <body>
             <div id="wrap">
                 <header class="header">
-                    <nav>AR</nav>
+                    <nav className="nav" >
+                        <div className="container">
+                        <img  src={logo} />
+                        </div>
+                    </nav>
                 </header>
                 <section class="slider_section">
                     <Link to={'/accountindex'}  className="btn1"><button>시작하기</button></Link>
