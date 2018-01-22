@@ -1,47 +1,38 @@
-body {
-  background-color: #0C283A;
-  color: white;
+*{margin:0; padding:0;}
+
+#wrap{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    width:100%;
+    margin-bottom: 2px;
 }
 
-.logo {
-    display: inline;
-    margin-right: 10rem;
-    height: 3.5rem;
-    width: 100vw;
-    line-height: 3.5rem;
-    color: pink;
-    font-size: 2rem;
-    text-decoration: none;
+.header{
+   
+    display:flex;
+    flex:1;
+    position:relative;
+    width:100%;
 }
 
-.menu {
-    display: inline;
-    vertical-align: middle;
-    font-size: 1rem;
-    border-bottom: 1px solid #dedede;
+.header nav{
+    display:flex;
+    width:100%;
+    min-height:55px;
+    background:whitesmoke;
+    justify-content: space-between;
 }
 
-
-.menu-item {
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 4rem;
-    overflow: hidden;
-    height: auto;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.3s;
-    text-decoration: none;
+.nav div{
+    flex-direction: row;
 }
 
-.menu-item:hover {
-    color: orange;
+.buttons span{
+   margin-right: 10px;
 }
 
-.menu-item:active, .menu-item.active {
-    color: red;
-}
-
-.button {
-  color: black;
+.container img{
+    display: flex;
+    justify-content: flex-left;
 }

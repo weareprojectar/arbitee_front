@@ -9,10 +9,10 @@ class AccountIndex extends React.Component {
     return (
       <div>
         <div><Header/></div>
-        <div>
-          <p>계좌가 없습니다. 계좌를 생성하시겠습니까?</p>
-          <Link to={'account'}><button type="button">계좌 생성하기</button></Link>
-          <Link to={'fundsimple'}><button type="button">둘러보기</button></Link>
+        <div className="content">
+          <h3>계좌가 없습니다. 계좌를 생성하시겠습니까?</h3>
+          <Link to={'account'}><button class="massive ui button">Create</button></Link>
+          <Link to={'fundsimple'}><button class="massive ui button">Around</button></Link>
         </div>
       </div>
     );
